@@ -487,47 +487,70 @@ footer {
         margin: 2px;
     }
 
-    .header {
+    header {
+        margin-inline: 5px;
+
         .search {
+            width: 70%;
+            height: 37px;
+            padding: 5px;
+            border-radius: 8px;
+
+            .search-box {
+                input::placeholder {
+                    font-size: 10px;
+                }
+            }
+
             button {
                 font-size: 12px;
                 padding: 6px;
             }
         }
 
+
         p {
-            font-size: 35px;
+            font-size: 25px;
         }
     }
 
     main {
+
         :is(#main-1, #main-2, #main-3) .title {
+            margin-block: 3px;
+            margin-right: 4px;
+
             svg {
                 width: 23px;
                 height: 23px;
             }
 
             h2 {
-                font-size: 15px;
+                font-size: 13px;
             }
         }
 
         #main-1 {
-            margin-inline: 14px;
-            padding-top: 4px;
+            margin-inline: 10px;
+            padding-top: 1px;
             padding-bottom: 12px;
 
             .box {
-                gap: 7px;
+                gap: 6px;
 
                 .item {
                     .img {
-                        width: 95px;
-                        height: 95px;
+                        width: 75px;
+                        height: 75px;
+
+                        img {
+                            border-top-right-radius: 5px;
+                            border-top-left-radius: 5px;
+                        }
                     }
 
                     h3 {
-                        font-size: 11px;
+                        font-size: 9px;
                     }
                 }
             }
@@ -545,17 +568,17 @@ footer {
                 .item {
                     .right {
                         .img {
-                            width: 40px;
-                            height: 40px;
+                            width: 35px;
+                            height: 35px;
                         }
 
                         .text {
                             .n-music {
-                                font-size: 12px;
+                                font-size: 9px;
                             }
 
                             .name {
-                                font-size: 9px;
+                                font-size: 7px;
                             }
                         }
                     }
@@ -564,13 +587,13 @@ footer {
 
                         .play-btn,
                         .stop-btn {
-                            width: 21px;
-                            height: 21px;
+                            width: 19px;
+                            height: 19px;
                         }
 
                         #download-btn {
-                            width: 15px;
-                            height: 15px;
+                            width: 13px;
+                            height: 13px;
                         }
                     }
                 }
@@ -601,13 +624,26 @@ footer {
         p {
             font-size: 12px;
         }
-    }
 
-    .audio-player {
-        .right {
-            img {
-                width: 53px;
-                height: 53px;
+        .media {
+            p {
+                font-size: 14px;
+            }
+
+            .join {
+                img {
+                    cursor: pointer;
+                    width: 22px;
+                }
+            }
+        }
+
+        .audio-player {
+            .right {
+                img {
+                    width: 53px;
+                    height: 53px;
+                }
             }
         }
     }
@@ -641,5 +677,4 @@ footer {
         width: 55%;
         padding: 11px;
     }
-
 }
