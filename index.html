@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <title>ایران موزیک | رپ فارس</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="theme-color" content="#01090e" />
+</head>
+
+<body>
+    <div id="error-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <p id="error-message">این آهنگ خراب است.</p>
+        </div>
+    </div>
+
+    <header>
+        <div class="search">
+            <div class="search-box">
+                <svg viewBox="0 0 24 24">
+                    <g>
+                        <path
+                            d="M10.77,18.3a7.53,7.53,0,1,1,7.53-7.53A7.53,7.53,0,0,1,10.77,18.3Zm0-13.55a6,6,0,1,0,6,6A6,6,0,0,0,10.77,4.75Z" />
+                        <path
+                            d="M20,20.75a.74.74,0,0,1-.53-.22L15.34,16.4a.75.75,0,0,1,1.06-1.06l4.13,4.13a.75.75,0,0,1,0,1.06A.74.74,0,0,1,20,20.75Z" />
+                    </g>
+                </svg>
+                <input type="text" placeholder="دنبال چی میگردی؟">
+            </div>
+            <button>جستوجو</button>
+        </div>
+        <p>IRAN</p>
+    </header>
+
+    <main>
+        <div id="main-1">
+            <div class="title">
+                <svg viewBox="0 0 24 24">
+                    <path
+                        d="M5 8a1 1 0 0 1 1 1v3a4.006 4.006 0 0 0 4 4h4a4.006 4.006 0 0 0 4-4V9a1 1 0 1 1 2 0v3.001A6.006 6.006 0 0 1 14.001 18H13v2h2a1 1 0 1 1 0 2H9a1 1 0 1 1 0-2h2v-2H9.999A6.006 6.006 0 0 1 4 12.001V9a1 1 0 0 1 1-1Z" />
+                    <path d="M7 6a4 4 0 0 1 4-4h2a4 4 0 0 1 4 4v5a4 4 0 0 1-4 4h-2a4 4 0 0 1-4-4V6Z" />
+                </svg>
+                <h2>خواننده های محبوب رپ فارسی</h2>
+            </div>
+            <div class="box" id="allartic">
+            </div>
+        </div>
+
+        <div id="main-2">
+            <div class="title">
+                <svg viewBox="0 0 24 24">
+                    <path
+                        d="M19.8497 4.70055C19.4524 3.57581 18.353 2.87898 17.1944 3.01758C16.9333 3.04881 16.6802 3.14255 16.4231 3.2575C16.1681 3.3715 15.8568 3.53109 15.4744 3.7272L12.999 4.99649C12.7146 5.14218 12.4921 5.25614 12.3014 5.40562C11.8107 5.79042 11.4753 6.34702 11.3591 6.96924C11.314 7.21097 11.3141 7.46603 11.3143 7.79211L11.3143 7.86969C11.3143 7.97438 11.3143 8.07441 11.3145 8.16992L11.3143 14.2982C10.5374 13.5505 9.49228 13.0925 8.34284 13.0925C5.94436 13.0925 4 15.0866 4 17.5463C4 20.0061 5.94436 22.0001 8.34284 22.0001C10.7413 22.0001 12.6857 20.0061 12.6857 17.5463V11.1833C13.1164 11.4089 13.6124 11.5084 14.1199 11.4477C14.381 11.4165 14.6341 11.3227 14.8912 11.2078C15.1462 11.0938 15.4574 10.9342 15.8399 10.7381L18.3152 9.46882C18.5997 9.32312 18.8222 9.20917 19.0128 9.05968C19.5036 8.67488 19.839 8.11828 19.9551 7.49606C20.0002 7.25434 20.0001 6.99929 20 6.67322L20 6.59559C20 6.15712 20 5.80024 19.9854 5.51536C19.9706 5.2281 19.9392 4.95404 19.8497 4.70055Z" />
+                </svg>
+                <h2>آهنگ های محبوب رپ فارسی</h2>
+            </div>
+
+            <div class="box" id="song-list">
+            </div>
+        </div>
+
+        <div id="main-3">
+            <div class="title">
+                <div class="right">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M19.8497 4.70055C19.4524 3.57581 18.353 2.87898 17.1944 3.01758C16.9333 3.04881 16.6802 3.14255 16.4231 3.2575C16.1681 3.3715 15.8568 3.53109 15.4744 3.7272L12.999 4.99649C12.7146 5.14218 12.4921 5.25614 12.3014 5.40562C11.8107 5.79042 11.4753 6.34702 11.3591 6.96924C11.314 7.21097 11.3141 7.46603 11.3143 7.79211L11.3143 7.86969C11.3143 7.97438 11.3143 8.07441 11.3145 8.16992L11.3143 14.2982C10.5374 13.5505 9.49228 13.0925 8.34284 13.0925C5.94436 13.0925 4 15.0866 4 17.5463C4 20.0061 5.94436 22.0001 8.34284 22.0001C10.7413 22.0001 12.6857 20.0061 12.6857 17.5463V11.1833C13.1164 11.4089 13.6124 11.5084 14.1199 11.4477C14.381 11.4165 14.6341 11.3227 14.8912 11.2078C15.1462 11.0938 15.4574 10.9342 15.8399 10.7381L18.3152 9.46882C18.5997 9.32312 18.8222 9.20917 19.0128 9.05968C19.5036 8.67488 19.839 8.11828 19.9551 7.49606C20.0002 7.25434 20.0001 6.99929 20 6.67322L20 6.59559C20 6.15712 20 5.80024 19.9854 5.51536C19.9706 5.2281 19.9392 4.95404 19.8497 4.70055Z" />
+                    </svg>
+                    <h2>ریمیکس های محبوب رپ فارسی</h2>
+                </div>
+                <p>بیشتر</p>
+            </div>
+
+            <div class="box" id="song-list2">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div onclick="window.scrollTo({top:0,behavior:'smooth'});" class="topsite">
+            <svg fill="currentColor" viewBox="0 0 16 16">
+                <path
+                    d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708z">
+                </path>
+                <path
+                    d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708z">
+                </path>
+            </svg>
+        </div>
+        <div class="media">
+            <p>سایت ایران را در شبکه های اجتماعی دنبال کنید.</p>
+            <div class="join">
+                <img src="svg/instagram.svg" alt="اینستاگرام">
+                <img src="svg/telegram.svg" alt="تلگرام">
+            </div>
+        </div>
+        <p>تمامی حقوق متعلق به سایت ایران موزیک است<sup>&copy</sup></p>
+    </footer>
+
+    <div id="player">
+        <div class="audio-player">
+            <div class="right">
+                <img id="player-img" src="">
+                <div class="text">
+                    <p id="player-title" class="title"></p>
+                    <p id="player-singer" class="artist"></p>
+                </div>
+            </div>
+
+            <div class="left">
+                <div class="time">
+                    <span id="current-time" class="col"></span><span class="vasat">/</span><span id="total-time"
+                        class="hal"></span>
+                </div>
+                <input type="range" id="progress-range" min="0" max="100" value="0">
+                <img src="svg/s.svg" id="play-btn" onclick="togglePlay()" class="play-1">
+                <img src="svg/p.svg" id="play-btn" onclick="togglePlay()" class="stop-1">
+            </div>
+        </div>
+        <audio id="audio"></audio>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
